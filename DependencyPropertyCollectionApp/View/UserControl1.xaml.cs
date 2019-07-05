@@ -42,7 +42,7 @@ namespace DependencyPropertyCollectionApp.View
             if (e.NewValue != null)
             {
                 ObservableCollection<int> numbers = (ObservableCollection<int>) e.NewValue;
-                ((UserControl1)d).OnSetNumbersChanged(e);
+                control.OnSetNumbersChanged(e);
                 // Subscribe to CollectionChanged on the new collection
                 numbers.CollectionChanged += control.Numbers_CollectionChanged;
             }
