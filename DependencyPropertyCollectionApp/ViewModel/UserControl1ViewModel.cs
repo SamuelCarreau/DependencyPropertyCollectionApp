@@ -1,7 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using DependencyPropertyCollectionApp.Annotations;
 
 namespace DependencyPropertyCollectionApp.ViewModel
 {
@@ -28,7 +27,6 @@ namespace DependencyPropertyCollectionApp.ViewModel
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        [NotifyPropertyChangedInvocator]
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
